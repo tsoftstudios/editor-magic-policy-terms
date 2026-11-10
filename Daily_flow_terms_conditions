@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Terms and Conditions for DayFlow - Daily Routines & Habits.">
+  <title>Terms and Conditions | DayFlow</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #18213b;
+      --muted: #626b82;
+      --purple: #6426d9;
+      --purple-dark: #4514a8;
+      --line: #e8e6f2;
+      --surface: #fff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 40px 18px;
+      background: linear-gradient(145deg, #f4f0ff 0%, #f8faff 55%, #f3f5ff 100%);
+      color: var(--ink);
+      font: 16px/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .page { max-width: 900px; margin: 0 auto; }
+    header {
+      padding: 34px 38px;
+      color: #fff;
+      background: linear-gradient(120deg, var(--purple-dark), #7b3ce8);
+      border-radius: 22px 22px 0 0;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #e4d7ff;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 0; font-size: clamp(30px, 5vw, 42px); line-height: 1.2; }
+    .subtitle { margin: 10px 0 0; color: #eee7ff; }
+    main {
+      padding: 34px 38px 42px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-top: 0;
+      border-radius: 0 0 22px 22px;
+      box-shadow: 0 18px 50px rgba(50, 31, 100, .08);
+    }
+    .updated {
+      display: inline-block;
+      margin: 0 0 26px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: #f1eaff;
+      color: var(--purple-dark);
+      font-size: 13px;
+      font-weight: 650;
+    }
+    p { margin: 0 0 16px; }
+    h2 {
+      margin: 32px 0 12px;
+      padding-bottom: 9px;
+      border-bottom: 1px solid var(--line);
+      color: var(--purple-dark);
+      font-size: 21px;
+      line-height: 1.35;
+    }
+    ul { margin: 8px 0 18px; padding-left: 24px; }
+    li { margin: 7px 0; padding-left: 3px; }
+    a { color: var(--purple); overflow-wrap: anywhere; }
+    footer { padding: 20px 10px 0; color: var(--muted); text-align: center; font-size: 13px; }
+    @media (max-width: 600px) {
+      body { padding: 18px 10px; }
+      header { padding: 26px 22px; }
+      main { padding: 25px 22px 32px; }
+      h2 { font-size: 19px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <p class="eyebrow">DayFlow · Legal</p>
+      <h1>Terms and Conditions</h1>
+      <p class="subtitle">Daily Routines &amp; Habit Tracker</p>
+    </header>
+
+    <main>
+      <p class="updated">Last Updated: October 31, 2026</p>
+
+      <p>Welcome to <strong>DayFlow</strong> ("Daily Routines &amp; Habit Tracker", "we", "our", or "us"). By downloading, accessing, or using the DayFlow mobile application (the "App"), you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>By creating, installing, accessing, or using DayFlow, you acknowledge that you have read, understood, and agreed to be bound by these Terms. We reserve the right to revise or modify these Terms at any time. Your continued use of the App following any changes indicates your acceptance of the updated Terms.</p>
+
+      <h2>2. Description of the Service</h2>
+      <p>DayFlow is an offline-first productivity and personal lifestyle management application designed to help users track daily routines, establish healthy habits, record tasks and expenses, maintain personal notes, and engage in mindfulness exercises.</p>
+      <p>Key application features include:</p>
+      <ul>
+        <li>Local on-device SQLite database storage.</li>
+        <li>Habit and routine scheduling, checklist tracking, and progress metrics.</li>
+        <li>Expense tracking and personal note-taking.</li>
+        <li>Optional user-initiated cloud backup and synchronization via personal Google Drive accounts.</li>
+        <li>Offline local JSON file backup and restore capabilities.</li>
+      </ul>
+
+      <h2>3. User Data and Privacy</h2>
+      <ul>
+        <li><strong>Offline Storage:</strong> All your routines, habits, notes, expenses, and logs are stored locally on your device. We do not transmit or store your personal tracking data on proprietary company servers.</li>
+        <li><strong>Data Responsibility:</strong> You are solely responsible for maintaining backup copies of your information using the offline export or Google Drive sync features. We are not liable for any data loss resulting from hardware failure, app uninstallation, device reset, or failure to back up.</li>
+        <li>Please review our <a href="PRIVACY_POLICY_URL">Privacy Policy</a> for comprehensive information on how your data is handled.</li>
+      </ul>
+
+      <h2>4. Third-Party Services</h2>
+      <p>DayFlow integrates with certain trusted third-party services:</p>
+      <ul>
+        <li><strong>Google Drive:</strong> Optional backup and restore functionality uses Google Sign-In and Google Drive API. Data uploaded belongs entirely to you and resides in your personal Google Drive storage.</li>
+        <li><strong>Google Mobile Ads (AdMob):</strong> The App may display banner or interstitial advertisements provided by Google AdMob. Third-party ad networks may collect device identifiers and other information according to their own privacy policies.</li>
+      </ul>
+
+      <h2>5. Intellectual Property</h2>
+      <p>All design elements, brand graphics, user interface assets, animations, software code, and documentation comprising DayFlow are the intellectual property of the developers and protected by applicable copyright laws. You are granted a limited, personal, non-exclusive, non-transferable license to use the App solely for personal, non-commercial purposes.</p>
+
+      <h2>6. Acceptable Use</h2>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Reverse engineer, decompile, or disassemble any portion of the App, except where applicable law permits.</li>
+        <li>Exploit bugs or security vulnerabilities.</li>
+        <li>Use the App for any unlawful, infringing, or prohibited activities under applicable local or international law.</li>
+      </ul>
+
+      <h2>7. Disclaimer of Warranties</h2>
+      <p>DayFlow is provided on an <strong>"AS IS"</strong> and <strong>"AS AVAILABLE"</strong> basis without warranties of any kind, whether express or implied, to the extent permitted by applicable law. We do not warrant that:</p>
+      <ul>
+        <li>The App will be uninterrupted, error-free, or free of harmful components.</li>
+        <li>The routines, habit tracking, or wellness exercises constitute professional medical, psychological, or financial advice. Always consult qualified professionals when needed.</li>
+      </ul>
+
+      <h2>8. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by applicable law, in no event shall DayFlow or its creators be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, loss of profits, device malfunction, or personal injury arising from your use of or inability to use the App.</p>
+
+      <h2>9. Modifications and Termination</h2>
+      <p>We reserve the right to update, modify, or discontinue any feature or component of the App at any time, subject to applicable law.</p>
+
+      <h2>10. Contact Us</h2>
+      <p>If you have any questions or concerns regarding these Terms and Conditions, please reach out to:</p>
+      <ul>
+        <li><strong>Support Team:</strong> <a href="mailto:tsoftstudios2026@gmail.com">tsoftstudios2026@gmail.com</a></li>
+        <li><strong>Application:</strong> DayFlow - Daily Routines &amp; Habits</li>
+      </ul>
+    </main>
+
+    <footer>© DayFlow. All rights reserved.</footer>
+  </div>
+</body>
+</html>
