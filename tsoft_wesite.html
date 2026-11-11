@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>T Soft Studios — Smart Apps. Better Experiences.</title>
+<meta name="description" content="T Soft Studios is a mobile application development studio building productivity, creative, PDF, utility and learning applications. All applications are coming soon." />
+<meta name="author" content="T Soft Studios" />
+<meta property="og:title" content="T Soft Studios — Smart Apps. Better Experiences." />
+<meta property="og:description" content="A mobile application ecosystem for productivity, creativity, learning and everyday digital tasks." />
+<meta property="og:type" content="website" />
+<meta name="theme-color" content="#0B1F3A" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230B1F3A'/><text x='50' y='68' font-size='54' font-family='Arial' font-weight='bold' fill='%234CC9F0' text-anchor='middle'>T</text></svg>">
+
+<style>
+:root{
+  --navy:#0B1F3A; --blue:#2563EB; --electric:#4CC9F0; --purple:#7C3AED;
+  --bg:#F6F8FC; --surface:#fff; --text:#111827; --muted:#5B6577; --border:#E4E9F2;
+  --radius:18px; --shadow:0 12px 34px rgba(11,31,58,.09);
+}
+[data-theme="dark"]{
+  --bg:#070B14; --surface:#0E1626; --text:#EAF0F8; --muted:#9AA7B8; --border:#1D2942;
+  --shadow:0 14px 40px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.container{width:min(1160px,92%);margin:auto}
+.section{padding:88px 0}
+.eyebrow{display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:rgba(37,99,235,.09);padding:8px 14px;border-radius:999px;margin-bottom:18px}
+h1,h2,h3{line-height:1.15;letter-spacing:-.02em}
+h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800}
+h2{font-size:clamp(1.9rem,3.6vw,2.7rem);font-weight:800;margin-bottom:16px}
+h3{font-size:1.18rem;font-weight:700}
+p{color:var(--muted)}
+.section-head{max-width:730px;margin-bottom:48px}
+
+.header{position:sticky;top:0;z-index:100;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.16rem}
+.logo-mark{width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;display:grid;place-items:center;font-weight:800}
+.nav-links{display:flex;gap:24px;font-weight:600;font-size:.93rem}
+.nav-links a:hover{color:var(--blue)}
+.nav-actions{display:flex;align-items:center;gap:12px}
+.theme-btn,.menu-btn{width:42px;height:42px;border-radius:12px;border:1px solid var(--border);background:var(--surface);cursor:pointer;font-size:1.05rem}
+.menu-btn{display:none}
+.mobile-menu{display:none;flex-direction:column;padding:12px 0 20px;border-top:1px solid var(--border)}
+.mobile-menu a{padding:12px 4px;font-weight:600}
+.mobile-menu.open{display:flex}
+
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 26px;border-radius:999px;font-weight:700;border:0;cursor:pointer;transition:.25s}
+.btn-primary{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;box-shadow:0 12px 28px rgba(37,99,235,.25)}
+.btn-primary:hover{transform:translateY(-2px)}
+.btn-secondary{background:var(--surface);border:1px solid var(--border);color:var(--text)}
+.btn-sm{padding:10px 18px;font-size:.85rem}
+
+.hero{padding:96px 0 90px;background:radial-gradient(1000px 500px at 85% -10%,rgba(76,201,240,.18),transparent),radial-gradient(800px 450px at 5% 10%,rgba(124,58,237,.13),transparent)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero p.lead{font-size:1.12rem;margin:22px 0 34px;max-width:560px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:34px;margin-top:52px;flex-wrap:wrap}
+.stat b{display:block;font-size:1.7rem}
+.phone{width:min(390px,100%);margin:auto;border-radius:38px;background:linear-gradient(160deg,#0B1F3A,#10294a);padding:16px;box-shadow:0 30px 80px rgba(11,31,58,.28)}
+.phone-screen{background:#F7F9FE;border-radius:28px;padding:22px;color:#111827}
+.app-preview{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #E7ECF5;border-radius:16px;padding:15px;margin-bottom:12px}
+.app-preview i{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;color:#fff;font-style:normal;font-weight:700}
+.badge{position:absolute;padding:10px 16px;border-radius:999px;background:var(--surface);box-shadow:var(--shadow);font-size:.82rem;font-weight:700}
+.badge-1{top:8%;left:-4%}
+.badge-2{bottom:10%;right:-2%}
+
+.grid{display:grid;gap:22px}
+.grid-3{grid-template-columns:repeat(3,1fr)}
+.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);transition:.25s}
+.card:hover{transform:translateY(-5px);border-color:rgba(37,99,235,.35)}
+.icon{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.4rem;margin-bottom:18px;color:#fff}
+.icon.blue{background:linear-gradient(135deg,#2563EB,#4CC9F0)}
+.icon.purple{background:linear-gradient(135deg,#7C3AED,#4CC9F0)}
+.icon.navy{background:linear-gradient(135deg,#0B1F3A,#2563EB)}
+.icon.cyan{background:linear-gradient(135deg,#06B6D4,#2563EB)}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue);background:rgba(37,99,235,.1);padding:5px 10px;border-radius:999px;margin-bottom:12px}
+.feature-list{list-style:none;margin:16px 0 22px}
+.feature-list li{display:flex;gap:9px;margin-bottom:9px;color:var(--muted);font-size:.94rem}
+.feature-list li:before{content:"✓";color:var(--blue);font-weight:800}
+
+.app-card{display:flex;flex-direction:column}
+.app-icon{width:64px;height:64px;border-radius:18px;display:grid;place-items:center;font-size:1.6rem;color:#fff;font-weight:800;margin-bottom:18px}
+.coming-badge{display:inline-flex;align-items:center;gap:8px;padding:9px 15px;border-radius:999px;background:rgba(124,58,237,.1);color:var(--purple);font-weight:700;font-size:.82rem;margin-top:auto}
+.coming-badge:before{content:"●";font-size:.6rem}
+
+.page-hero{padding:76px 0 54px;background:linear-gradient(180deg,rgba(37,99,235,.08),transparent);border-bottom:1px solid var(--border)}
+.page-hero h1{font-size:clamp(2.2rem,5vw,3.4rem)}
+.page-hero p{max-width:680px;margin-top:16px}
+.content{max-width:820px}
+.content h2{margin-top:38px}
+.content p{margin-top:12px}
+.content ul{margin:14px 0 0 22px;color:var(--muted)}
+.notice{background:rgba(37,99,235,.07);border:1px solid rgba(37,99,235,.22);border-radius:16px;padding:20px;margin-top:26px}
+
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-grid .full{grid-column:1/-1}
+label{font-weight:600;font-size:.9rem;display:block;margin-bottom:7px}
+input,textarea,select{width:100%;padding:14px;border-radius:12px;border:1px solid var(--border);background:var(--bg);color:var(--text);font:inherit}
+textarea{min-height:150px;resize:vertical}
+
+.email-card{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.email-card a{font-weight:700;color:var(--blue);word-break:break-all}
+.cta{background:linear-gradient(135deg,var(--navy),#173B7A 55%,var(--purple));color:#fff;border-radius:28px;padding:64px 42px;text-align:center}
+.cta h2{color:#fff}
+.cta p{color:rgba(255,255,255,.78);max-width:620px;margin:0 auto 30px}
+.footer{background:var(--navy);color:#DCE6F5;padding:70px 0 28px;margin-top:90px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:38px}
+.footer h4{color:#fff;margin-bottom:16px}
+.footer a{display:block;color:#AFC0D8;font-size:.93rem;margin-bottom:10px}
+.footer a:hover{color:#fff}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.14);margin-top:48px;padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#8FA3BE;font-size:.86rem}
+
+@media(max-width:980px){
+  .hero-grid,.footer-grid{grid-template-columns:1fr}
+  .grid-3,.grid-4{grid-template-columns:repeat(2,1fr)}
+  .nav-links,.nav-actions .btn{display:none}
+  .menu-btn{display:block}
+}
+@media(max-width:620px){
+  .section{padding:64px 0}
+  .grid-3,.grid-4,.form-grid{grid-template-columns:1fr}
+  .cta{padding:48px 24px}
+  .footer-bottom{justify-content:center;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="#home" class="logo"><span class="logo-mark">T</span> T Soft Studios</a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#apps">Our Apps</a>
+        <a href="#categories">Categories</a>
+        <a href="#coming-soon">Coming Soon</a>
+        <a href="#support">Support</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="mailto:tsoftstudios2026@gmail.com" class="btn btn-primary btn-sm">Email Support</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#apps">Our Apps</a>
+      <a href="#categories">Categories</a>
+      <a href="#coming-soon">Coming Soon</a>
+      <a href="#support">Support</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Mobile Application Studio</span>
+        <h1>Technology That Makes Everyday Life Easier.</h1>
+        <p class="lead">Discover thoughtfully designed mobile applications for productivity, creativity, document management, learning and everyday tasks. All T Soft Studios applications are currently coming soon.</p>
+        <div class="hero-actions">
+          <a href="#apps" class="btn btn-primary">Explore Our Apps</a>
+          <a href="mailto:tsoftstudios2026@gmail.com" class="btn btn-secondary">Email Support</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>Android</b><span class="muted">Apps coming soon</span></div>
+          <div class="stat"><b>iOS</b><span class="muted">Where available</span></div>
+          <div class="stat"><b>Email</b><span class="muted">Support & inquiries</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="phone">
+          <div class="phone-screen">
+            <div class="app-preview"><i style="background:#2563EB">D</i><div><strong>DayFlow</strong><br><small>Coming Soon</small></div></div>
+            <div class="app-preview"><i style="background:#7C3AED">P</i><div><strong>Photo & Video Editor</strong><br><small>Coming Soon</small></div></div>
+            <div class="app-preview"><i style="background:#06B6D4">P</i><div><strong>PDF Tools</strong><br><small>Coming Soon</small></div></div>
+            <div class="app-preview"><i style="background:#0B1F3A">U</i><div><strong>Utility Tools</strong><br><small>Coming Soon</small></div></div>
+          </div>
+        </div>
+        <span class="badge badge-1">Productivity</span>
+        <span class="badge badge-2">Coming Soon</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">About Us</span>
+        <h2>Building useful mobile experiences</h2>
+        <p>T Soft Studios is an independent mobile application development studio focused on creating innovative, useful, intelligent and productivity-driven applications.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card"><div class="icon blue">🎯</div><h3>Our Mission</h3><p>To create accessible, innovative and reliable mobile applications that make everyday digital experiences simpler and smarter.</p></div>
+        <div class="card"><div class="icon purple">🚀</div><h3>Our Vision</h3><p>To build a growing ecosystem of useful mobile applications that empower people to work smarter, create freely and learn continuously.</p></div>
+        <div class="card"><div class="icon navy">🛡️</div><h3>Our Philosophy</h3><p>We focus on simplicity, performance, thoughtful design and user trust. Our applications are designed to solve real everyday needs.</p></div>
+      </div>
+      <div class="notice">
+        <strong>Current status:</strong> All T Soft Studios applications are currently in development or preparation for release. Features, platforms, availability and release dates may change.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="apps">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Our Applications</span>
+        <h2>Applications coming soon</h2>
+        <p>Explore the T Soft Studios application ecosystem. All applications listed below are currently coming soon.</p>
+      </div>
+      <div class="grid grid-3" id="appGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Categories</span>
+        <h2>Explore by category</h2>
+      </div>
+      <div class="grid grid-4">
+        <div class="card"><div class="icon blue">📅</div><h3>Productivity</h3><p>Daily routines, habits, tasks, notes and personal organization.</p></div>
+        <div class="card"><div class="icon purple">🎨</div><h3>Creative Apps</h3><p>Photo editing, video tools, filters and AI-powered creative features.</p></div>
+        <div class="card"><div class="icon cyan">📄</div><h3>PDF & Documents</h3><p>View, scan, merge, split, compress and manage documents.</p></div>
+        <div class="card"><div class="icon navy">🧰</div><h3>Tools & Utilities</h3><p>Practical tools, converters, calculators and everyday helpers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="coming-soon">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Coming Soon</span>
+        <h2>Innovation in progress</h2>
+        <p>T Soft Studios is developing new applications across productivity, learning, creativity and everyday utility. No download links are available until an application is officially released.</p>
+      </div>
+      <div class="grid grid-3">
+        <div class="card"><span class="tag">Coming Soon</span><h3>Learning Applications</h3><p>Educational tools, programming resources, skill development and interactive learning experiences.</p></div>
+        <div class="card"><span class="tag">Coming Soon</span><h3>AI Creative Tools</h3><p>AI-assisted photo transformations, creative effects and intelligent editing workflows.</p></div>
+        <div class="card"><span class="tag">Coming Soon</span><h3>More Everyday Tools</h3><p>New utilities designed to simplify common digital and mobile tasks.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="support">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Support</span>
+        <h2>Email support</h2>
+        <p>For technical support, bug reports, application feedback, privacy requests or business inquiries, please contact us by email.</p>
+      </div>
+      <div class="card email-card">
+        <div class="icon blue">✉️</div>
+        <div>
+          <h3>Official Support Email</h3>
+          <p>Send your message to:</p>
+          <a href="mailto:tsoftstudios2026@gmail.com">tsoftstudios2026@gmail.com</a>
+        </div>
+      </div>
+      <div class="notice">
+        <strong>When contacting support, please include:</strong> the application name, device model, operating-system version, a clear description of the issue, and screenshots or screen recordings if available. Do not share passwords, payment details or other sensitive information by email.
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Contact</span>
+        <h2>Contact T Soft Studios</h2>
+        <p>For support, feedback, bug reports or business inquiries, email us at the address below.</p>
+      </div>
+      <div class="card email-card">
+        <div class="icon purple">📧</div>
+        <div>
+          <h3>tsoftstudios2026@gmail.com</h3>
+          <p>Official contact and support email for T Soft Studios.</p>
+          <a class="btn btn-primary" style="margin-top:16px" href="mailto:tsoftstudios2026@gmail.com?subject=Support%20Request">Send an Email</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cta">
+        <h2>Smart Apps. Better Experiences.</h2>
+        <p>Discover T Soft Studios applications built to support productivity, creativity, learning and everyday digital tasks. All applications are coming soon.</p>
+        <a href="mailto:tsoftstudios2026@gmail.com" class="btn btn-secondary">Contact Support</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color:#fff;margin-bottom:18px"><span class="logo-mark">T</span> T Soft Studios</div>
+        <p style="color:#AFC0D8;max-width:330px">Smart Apps. Better Experiences.<br>A mobile application ecosystem for productivity, creativity and learning.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#about">About T Soft Studios</a>
+        <a href="#apps">Applications</a>
+        <a href="#coming-soon">Coming Soon</a>
+        <a href="#support">Support</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms & Conditions</a>
+        <a href="#cookies">Cookie Policy</a>
+        <a href="#refunds">Refund & Cancellation Policy</a>
+        <a href="#disclaimer">Disclaimer</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:tsoftstudios2026@gmail.com">tsoftstudios2026@gmail.com</a>
+        <a href="#support">Email Support</a>
+        <a href="#contact">Business Inquiries</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> T Soft Studios. All rights reserved.</span>
+      <span>Smart Apps. Better Experiences.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const apps = [
+  {name:"DayFlow", category:"Productivity", icon:"D", color:"#2563EB", description:"Daily routine management, habit tracking, tasks, expenses, notes and wellness tracking.", features:["Daily routine management","Habit tracking","Task and checklist management","Expense tracking","Personal notes","Wellness tracking","Offline-first functionality"]},
+  {name:"Photo & Video Editor", category:"Creative Apps", icon:"P", color:"#7C3AED", description:"Creative photo and video editing tools for enhancement, effects and AI-powered transformations.", features:["Photo editing","Creative effects","AI-powered photo transformations","Background removal and replacement","Filters and enhancement","Video editing tools"]},
+  {name:"PDF Tools", category:"PDF & Documents", icon:"P", color:"#06B6D4", description:"Practical PDF and document tools for viewing, scanning, organizing and managing files.", features:["PDF viewer","Document scanning","PDF merging and splitting","PDF compression","Image-to-PDF conversion","Document management"]},
+  {name:"Utility Tools", category:"Tools & Utilities", icon:"U", color:"#0B1F3A", description:"Everyday utility applications designed to make common mobile and digital tasks simpler.", features:["Everyday productivity tools","File management utilities","Calculators and converters","Device-related utilities","Other useful tools"]},
+  {name:"Learning Apps", category:"Learning", icon:"L", color:"#4CC9F0", description:"Learning and educational applications designed to support skill development and continuous learning.", features:["Learning and educational tools","Programming and technology learning","Skill development applications","Interactive learning experiences"]}
+];
+
+document.getElementById("appGrid").innerHTML = apps.map(app => `
+  <article class="card app-card">
+    <span class="tag">${app.category}</span>
+    <div class="app-icon" style="background:${app.color}">${app.icon}</div>
+    <h3>${app.name}</h3>
+    <p>${app.description}</p>
+    <ul class="feature-list">${app.features.slice(0,4).map(f=>`<li>${f}</li>`).join("")}</ul>
+    <span class="coming-badge">Coming Soon</span>
+  </article>
+`).join("");
+
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("menuBtn").onclick = () => document.getElementById("mobileMenu").classList.toggle("open");
+document.getElementById("themeToggle").onclick = () => {
+  const dark = document.documentElement.dataset.theme === "dark";
+  document.documentElement.dataset.theme = dark ? "" : "dark";
+  document.getElementById("themeToggle").textContent = dark ? "🌙" : "☀️";
+};
+</script>
+</body>
+</html>
